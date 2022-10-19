@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STICKERSBYAMACS</title>
+  <link rel="stylesheet" href="style.css">
+
+<body>
+  <div class="container">
+  <div class="top">
+    <header>
+      <div class="grid-3-columns"></div>       
+      <img src="images/yellowstar.jpg" class="star1" width="40" height="40">
+      <h1>STICKERSBYAMACS</h1> <img src="images/yellowstar.jpg" class="star2" width="40" height="40">
+    </header>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Custom</a></li>
+      <li>
+        <a href="#">Shop &#9662;</a>
+        <ul class="dropdown">
+          <li><a href="#">Window Decals</a></li>
+          <li><a href="#">Windshield Decals</a></li>
+          <li><a href="#">Cake Toppers</a></li>
+        </ul>
+        <li><a href="#">Contact</a></li>
+  </nav>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="images/justin2.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="images/genius2.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="images/taz2.png" style="width:100%">
+</div>
+
+</div>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+  <aside>
+    <div class="left"><img src="images/accrop.jpg" class="active"></div>
+    <div class="middle"><img src="images/foxymamacrop.jpg" class="fox"></div>
+    <div class="right"><img src="images/eazycobracrop.jpg" class="cobra"></div>
+  </aside>
+
+
+  <main>
+    <div class="hero">
+      <img src="images/50gangfox.jpg" class="50gang" width="1095" height="700">
+    </div>
+  </main>
+  <footer>
+    <ul>
+      <li><a href=#>CONTACT</a></li>
+    </ul>
+  </footer>
+  </div>
+</body>
+
+<script>
+  let slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 3000); // Change image every 2 seconds
+  }
+  </script>
+</html>
